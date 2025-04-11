@@ -6,6 +6,7 @@ provider "aws" {
 resource "aws_instance" "myFirstInstance" {
     ami = "ami-0c02fb55956c7d316"
     instance_type = "t2.micro"
+    count = 3
     tags = {
       Name = "Cloud_Instance"
     }
